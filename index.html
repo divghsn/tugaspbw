@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Profil Pribadi</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            background: #0f172a;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav h2 {
+            color: #22d3ee;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #22d3ee;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 85vh;
+            padding: 70px 8%;
+            background: linear-gradient(135deg, #0f172a, #164e63);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text h4 {
+            color: #67e8f9;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 10px;
+        }
+
+        .hero-text h3 {
+            color: #cbd5e1;
+            margin-bottom: 18px;
+        }
+
+        .hero-text p {
+            color: #cbd5e1;
+            margin-bottom: 28px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #06b6d4;
+            color: #082f49;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #67e8f9;
+            transform: translateY(-2px);
+        }
+
+        .profile-image {
+            width: 280px;
+            height: 320px;
+            border-radius: 24px;
+            object-fit: cover;
+            border: 4px solid #22d3ee;
+            background: #164e63;
+        }
+
+        /* Bagian umum */
+        section {
+            padding: 75px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 35px;
+            color: #0f172a;
+        }
+
+        /* Tentang */
+        .about {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .about p {
+            color: #475569;
+            font-size: 1.05rem;
+        }
+
+        /* Keahlian */
+        .skills {
+            background: white;
+        }
+
+        .skill-container {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            padding: 28px 20px;
+            background: #f8fafc;
+            border-radius: 14px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: #06b6d4;
+        }
+
+        .skill-card h3 {
+            color: #0891b2;
+            margin-bottom: 8px;
+        }
+
+        /* Kontak */
+        .contact {
+            text-align: center;
+            background: #e2e8f0;
+        }
+
+        .contact p {
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 22px;
+        }
+
+        /* Tampilan HP */
+        @media (max-width: 700px) {
+            nav {
+                padding: 16px 5%;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 55px 6%;
+            }
+
+            .profile-image {
+                width: 210px;
+                height: 240px;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigasi -->
+    <nav>
+        <h2>MyProfile.</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#keahlian">Keahlian</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Halaman utama -->
+    <header class="hero" id="home">
+        <div class="hero-text">
+            <h4>HALO, SELAMAT DATANG!</h4>
+
+            <h1>Saya, Diva Ghaisani Athika Putri</h1>
+
+            <h3>Mahasiswa</h3>
+
+            <p>
+                Selamat datang di website profil pribadi saya.
+                Di sini kamu bisa mengenal saya, melihat keahlian,
+                dan mengetahui cara menghubungi saya.
+            </p>
+
+            <a href="#tentang" class="btn">
+                Kenali Saya
+            </a>
+        </div>
+
+        <!-- Ganti foto.jpg dengan foto milikmu -->
+        <img
+            src="foto saya.jpeg"
+            alt="Foto profil saya"
+            class="profile-image"
+        >
+    </header>
+
+    <!-- Tentang saya -->
+    <section id="tentang">
+        <div class="about">
+            <h2 class="section-title">Tentang Saya</h2>
+
+            <p>
+                Halo! Nama saya Diva Ghaisani Athika Putri. Saya adalah seorang Mahasiswa Aktif Teknik Informatika
+                yang senang mempelajari hal baru, mengembangkan
+                kreativitas, dan meningkatkan kemampuan diri.
+                Website ini dibuat sebagai tempat untuk
+                memperkenalkan diri dan menampilkan profil saya.
+            </p>
+        </div>
+    </section>
+
+    <!-- Keahlian dan hobi -->
+    <section class="skills" id="keahlian">
+        <h2 class="section-title">Keahlian & Hobi</h2>
+
+        <div class="skill-container">
+            <div class="skill-card">
+                <h3>💻 Teknologi</h3>
+                <p>Belajar komputer dan pemrograman.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>🎨 Kreativitas</h3>
+                <p>Membuat desain dan karya digital.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>📚 Belajar</h3>
+                <p>Mengembangkan ilmu dan wawasan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section class="contact" id="kontak">
+        <h2 class="section-title">Hubungi Saya</h2>
+
+        <p>
+            Terima kasih sudah mengunjungi website profil saya!
+        </p>
+
+        <!-- Ganti alamat email dengan email milikmu -->
+        <a
+            href="mailto:divaghaisani07@gmail.com"
+            class="btn"
+        >
+            Kirim Email
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; <span id="tahun"></span> Diva Ghaisani Athika Putri.
+        
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById("tahun").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
